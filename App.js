@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 function App() {
   const [data,setData]=useState([])
   useEffect(()=> {
-    axios.get('http://localhost:3000/users')
+    axios.post('http://localhost:3000/users')
     .then(result => setData(result.data))
     .catch(error => console.log(error));
   }, [])
