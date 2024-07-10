@@ -1,5 +1,5 @@
 import React from 'react';
-import "./role.css"
+import "../assets/UserRole.css"
 
   const Role = () =>  {
 	return (
@@ -16,7 +16,7 @@ import "./role.css"
             <option value="teacher">Teacher</option>
             <option value="admin">Admin</option>
           </select>
-          <input className="submitbtn" type="submit" value="Submit" />
+          <input className="submitbtn_role" type="submit" value="Submit" />
         </form>
       </div>
     </div>
@@ -24,28 +24,3 @@ import "./role.css"
 }
  
 export default Role;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

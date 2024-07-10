@@ -1,9 +1,10 @@
-import React from 'react';
-import "./std_role.css" 
+import React from 'react'
+import '../assets/StudentRole.css'
 
-  const Student_role = () =>  {
-	return (
-    <div className="container1">
+const Student_Role = () => {
+  return (
+    <div>
+      <div className="container1">
         <h1 className="heading">Student Profile Form</h1>
         <div className="container2">
             <form className="Student_form" action="/submit" method="post">
@@ -36,42 +37,8 @@ import "./std_role.css"
             </form>
         </div>
     </div>
-	);
+    </div>
+  )
 }
-  
-export default Student_role;
-  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default Student_Role
