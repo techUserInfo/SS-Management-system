@@ -45,4 +45,8 @@ const StudentTable = () => {
   )
 }
 
+<<<<<<< HEAD:src/Components/StudentTable.js
 export default StudentTable
+=======
+export default App;
+>>>>>>> d1ecfd4640b17806a23d5e3c1d3df6f3ebabf36d:App.js
