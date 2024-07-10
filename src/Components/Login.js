@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { FaUser, FaLock ,} from "react-icons/fa";
-import "./Login.css"
 import { useNavigate ,Link} from "react-router-dom";
+import "../assets/Login.css"
 
 
     const Login = () => {
@@ -21,7 +21,7 @@ import { useNavigate ,Link} from "react-router-dom";
        const data = { username, password };
       // mongoose.connect(mongodb://localhost:27017)
             try {
-              fetch("http://localhost:3000/users",{
+              fetch("http://localhost:6666/login",{
                 method: 'POST',
                 headers: {
                   'Accept': 'application/json',
@@ -29,19 +29,22 @@ import { useNavigate ,Link} from "react-router-dom";
                 },
                 body: JSON.stringify(data)
               })
-              .then(async response=>{
+              .then(( response)=>{
+                console.log(response.message);
                 if (!response.ok) {
                  throw new Error('Invalid username or password');
-                }
-                const result = await response.json();
-                console.log("Login successful:", result);
+                }else{
+                // const result = await response.json();
+                // console.log("Login successful:", result);
                 navigate('/home');
+                }
+                
               })   
               } catch (error){
                 console.error("Unexpected error:", error);
                 setError('An unexpected error occurred. Please try again.');
-              }
-    };       
+              };
+      }  
           
   return (
     
@@ -76,7 +79,7 @@ import { useNavigate ,Link} from "react-router-dom";
             <a href='#'>Forgot Password?</a>
         </div>
 
-        <button onSubmit={controlSubmit}
+        <button onClick={controlSubmit}
         type='submit'className='btn'>Login</button>
 
         <div className="register-link">
@@ -87,9 +90,6 @@ import { useNavigate ,Link} from "react-router-dom";
         </div>
         </form>
     </div>
-    
-
   );
-       
 }
 export default Login;

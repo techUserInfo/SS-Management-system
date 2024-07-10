@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate, Link } from "react-router-dom";
 import { FaUser, FaLock ,} from "react-icons/fa";
-import "./Register.css"
+import "../assets/Register.css"
 
 
 

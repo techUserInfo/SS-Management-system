@@ -1,30 +1,37 @@
-.home{
+.body{
     font-family: 'Roboto', sans-serif;
     margin: 10px;
     padding: 10px;
-    display: flexbox;
     text-align: center;
     height: 100vh;
 }
 
-.userid {
-    font-size: 28px;
-    color: #0e8d7e;
-    margin-top: 11%;
-    padding-left: 2em;
+.userid1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: inline;
+    width: 30%;
+    margin: auto;
+    padding: 20px;
+    color: #0bd3b1;
+    justify-content: center;
+    padding-bottom: 50px;
+    text-align: center;
 }
 
-.myForm {
-    background-color: #9b6e6e;
+.roleForm {
+    background-color: #efe5e5;
+    display: inline-block;
     padding: 20px;
     border-radius: 15px;
-    margin-right: 40%;
-    margin-left: 40%;
+    /* justify-content: center; */
     box-shadow: 0 0 15px rgba(75, 72, 72, 0.1);
-    width: 300px;
+    width: 350px;
 }
 
 label {
+    font-size: 20px;
+    text-align: center;
     font-weight: bold;
     color: #0bd3b1;
 }
@@ -40,7 +47,7 @@ label {
     box-sizing: border-box;
 }
 
-.submitbtn {
+.submitbtn_role {
     width: 50%;
     background-color: #4CAF50;
     color: white;
@@ -52,7 +59,7 @@ label {
     font-size: 16px;
 }
 
-.submitbtn:hover {
+.submitbtn__role:hover {
     background-color: #3ba288;
     transition-delay: 0.4ms;
 }
