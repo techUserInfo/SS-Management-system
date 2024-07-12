@@ -14,6 +14,7 @@ const RoutesConfig = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/userRole" element={<UserRole />} />
+          <Route path ="/teacherRole" element={<TeacherRole/>}/>
           <Route path="/studentRole" element={<StudentRole />} />
           <Route path="/studentTable" element={<StudentTable />} />
           <Route exact path="/" element={<Login />} />
