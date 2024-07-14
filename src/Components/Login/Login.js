@@ -28,6 +28,7 @@ const Login = () => {
           throw new Error("Invalid username or password");
         } else {
           //insert sesion storage
+          sessionStorage.setItem("user", JSON.stringify(res.data.user));
           //role api
 
           navigate("/userRole");
