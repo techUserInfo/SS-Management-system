@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import UserRole from "../Components/Admin/UserRole";
 import Login from "../Components/Login/Login";
 import Register from "../Components/Login/Register";
+import TeacherRole from "../Components/Teacher/teacherRole";
 import StudentRole from "../Components/Student/StudentRole";
 import StudentTable from "../Components/Student/StudentTable";
 
@@ -25,3 +26,5 @@ const RoutesConfig = () => {
 };
 
 export default RoutesConfig;
+
+
