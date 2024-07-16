@@ -4,14 +4,9 @@ import '../../assets/css/teacherRole.css'
   
 const TeacherRole = () =>  {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    parentName: '',
+    UserName: '',
     phone: '',
-    email: '',
-    className: '',
-    section: '',
-    spoc: ''
+    email: ''
   });
 
   const handleChange = (e) => {
@@ -40,29 +35,14 @@ const TeacherRole = () =>  {
         <div className="container2">
             <form className="Student_form" onSubmit={handleSubmit}>
 
-              <label>First Name</label>
-              <input type="text" name="firstName" required value={formData.firstName} onChange={handleChange}/>
+              <label>User Name</label>
+              <input type="text" name="UserName" required value={formData.UserName} onChange={handleChange}/>
 
-              <label>Last Name</label> 
-              <input type="text" name="lastName" required value={formData.lastName} onChange={handleChange}/>
-
-              <label>Parent Name</label>
-              <input type="text" name="parentName" required value={formData.parentName} onChange={handleChange}/>
-
-              <label>Phone Number</label>
+              <label>Phone No.</label>
               <input type="tel" name="phone" required value={formData.phone} onChange={handleChange}/>
 
               <label>Email</label>
               <input type="email" name="email" required value={formData.email} onChange={handleChange}/>
-
-              <label>className</label>
-              <input type="text" name="className" required value={formData.className} onChange={handleChange}/>
-
-              <label>Section</label>
-              <input type="text" name="section" required value={formData.section} onChange={handleChange}/>
-
-              <label>SPOC</label>
-              <input type="text" name="spoc" required value={formData.spoc} onChange={handleChange}/>
 
               <input className="Std_submitbtn" type="submit" value="Submit"/>
             </form>
