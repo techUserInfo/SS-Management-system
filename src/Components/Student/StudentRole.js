@@ -1,5 +1,5 @@
 import React from "react";
-import "../../assets/css/StudentRole.css";
+import "../../assets/css/Dashboard.css";
 
 const Student_Role = () => {
   return (

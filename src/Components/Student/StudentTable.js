@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import "../../assets/css/StudentTable.css";
+import "../../assets/css/Dashboard.css";
 
 const StudentTable = () => {
   const [data, setData] = useState([]);
