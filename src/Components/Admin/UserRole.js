@@ -1,5 +1,5 @@
 import React from "react";
-import "../../assets/css/UserRole.css";
+import "../../assets/css/Dashboard.css";
 
 const Role = () => {
   return (
