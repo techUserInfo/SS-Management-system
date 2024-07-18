@@ -35,6 +35,7 @@ const Student_Role = () => {
             <input className="Std_submitbtn" type="submit" value="Submit" />
           </form>
         </div>
+        
       </div>
     </div>
   );

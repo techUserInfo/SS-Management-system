@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import RoutesConfig from './Routes/RoutesConfig';
 
 const App = () => {
@@ -8,6 +8,5 @@ const App = () => {
     </div>
   )
 }
-
 export default App;
 

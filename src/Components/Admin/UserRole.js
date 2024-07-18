@@ -1,9 +1,13 @@
 import React from "react";
 import "../../assets/css/UserRole.css";
+import Dashboard from "../Comman/Dashboard";
+
 
 const Role = () => {
   return (
-    <div className="userid">
+    <>
+     <Dashboard/>
+      <div className="userid">
       <h2>User Role</h2>
       <div className="roleForm">
         <form action="/submit" method="post">
@@ -25,8 +29,10 @@ const Role = () => {
           </select>
           <input className="submitbtn_role" type="submit" value="Submit" />
         </form>
+        
       </div>
     </div>
+    </>
   );
 };
 
