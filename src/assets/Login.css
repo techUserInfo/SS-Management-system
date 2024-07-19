@@ -1,9 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
+
 body{
     display: flex;
     justify-content: center;
@@ -33,6 +28,8 @@ body{
 .login .input-box label{
     color: #333;
     font-weight: 400;
+    text-align: left;
+    font-size: 1.2rem;
 }
 .input-box input{
     height: 90%;
@@ -64,13 +61,20 @@ body{
 .rem-for label {
     color: #333;
     font-weight: 400;
+    font-size: 1rem;
+    display: flex;
+    margin: 10px 5px 4px;
+    
 }
 .rem-for label input{
     margin-right: 3px;
+    font-size: small;
+    width: 10%;
 }
 .rem-for a{
     color: #333;
     text-decoration: none;
+    margin-top: 3%;
 }
 .rem-for a:hover{
     text-decoration: underline;

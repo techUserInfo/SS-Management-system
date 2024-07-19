@@ -23,7 +23,7 @@ const [name, setName] = useState('');
 
     const data ={name, username, emailId, phoneNo, password};
     try {
-        const response = await fetch("http://localhost:3000/users", {
+        const response = await fetch("http://localhost:5000/users", {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
@@ -48,14 +48,14 @@ const [name, setName] = useState('');
     <form onSubmit={controlSubmit}>
         <h2>Registration</h2>
         <div className="label-box">
-            <label1 for='name'>Name</label1>
+            <label for='name'>Name</label>
             <input name="name" value={name} 
             onChange={(e)=> setName(e.target.value)}
              type='text' id='name' required/>
             <FaUser className='icon'/>
         </div>
         <div className="label-box">
-            <label1 for='username'>Username</label1>
+            <label for='username'>Username</label>
             <input 
             name="username"
             value={username}
@@ -64,7 +64,7 @@ const [name, setName] = useState('');
             <FaUser className='icon'/>
         </div>
         <div className="label-box">
-            <label1 for='email'>Email Id</label1>
+            <label for='email'>Email Id</label>
             <input
             name="emailId"
             value={emailId}
@@ -82,7 +82,7 @@ const [name, setName] = useState('');
             <FaLock className='icon'/>
         </div>
         <div className="label-box">
-            <label1 for='password'>Password</label1>
+            <label for='password'>Password</label>
             <input 
             name="password"
             value={password}
@@ -91,7 +91,7 @@ const [name, setName] = useState('');
             <FaLock className='icon'/>
         </div>
         <div className="term">
-            <label1><input type='checkbox' required/>I agree to the terms & conditions</label1>
+            <label><input type='checkbox' required/>I agree to the terms & conditions</label>
             
         </div>
 

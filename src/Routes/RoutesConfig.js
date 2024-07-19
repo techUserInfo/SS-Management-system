@@ -5,6 +5,7 @@ import Login from '../Components/Login';
 import Register from '../Components/Register';
 import StudentRole from '../Components/StudentRole';
 import StudentTable from '../Components/StudentTable';
+import Dashboard from '../Components/Student/Dashboard';
 
 const RoutesConfig = () => {
   return (
@@ -17,6 +18,7 @@ const RoutesConfig = () => {
           <Route exact path="/" element={< Login />}/>
           <Route path ="/studentRole" element={<StudentRole/>}/>
           <Route path ="/studentTable" element={<StudentTable/>}/>
+          <Route path='/dashboard' element={<Dashboard/>}/>
         </Routes>
       </BrowserRouter>
     </div>
