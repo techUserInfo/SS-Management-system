@@ -21,7 +21,7 @@ const Register = () => {
 
     const data = { name, username, emailId, phoneNo, password };
     try {
-      const response = await fetch("http://localhost:3000/users", {
+      const response = await fetch("http://localhost:5000/users", {
         method: "POST",
         headers: {
           Accept: "application/json",

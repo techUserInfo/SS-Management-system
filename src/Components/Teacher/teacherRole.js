@@ -5,8 +5,8 @@ import '../../assets/css/teacherRole.css'
 const TeacherRole = () =>  {
   const [formData, setFormData] = useState({
     UserName: '',
-    phone: '',
-    email: ''
+    PhoneNumber: '',
+    Email: ''
   });
 
   const handleChange = (e) => {
@@ -16,7 +16,7 @@ const TeacherRole = () =>  {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    console.log(formData);
     try {
       const response = await axios.post("http://localhost:5000/teachers", formData);
       if (response.status === 200) {
@@ -33,18 +33,18 @@ const TeacherRole = () =>  {
         <div className="container1">
         <h1 className="heading">Teacher Profile Form</h1>
         <div className="container2">
-            <form className="Student_form" onSubmit={handleSubmit}>
+            <form className="Student_form" action="/submit" method="post" >
 
               <label>User Name</label>
               <input type="text" name="UserName" required value={formData.UserName} onChange={handleChange}/>
 
               <label>Phone No.</label>
-              <input type="tel" name="phone" required value={formData.phone} onChange={handleChange}/>
+              <input type="tel" name="PhoneNumber" required value={formData.phone} onChange={handleChange}/>
 
               <label>Email</label>
-              <input type="email" name="email" required value={formData.email} onChange={handleChange}/>
+              <input type="email" name="Email" required value={formData.Email} onChange={handleChange}/>
 
-              <input className="Std_submitbtn" type="submit" value="Submit"/>
+              <input className="Std_submitbtn" type="submit" value="Submit" onClick={handleSubmit}/>
             </form>
         </div>
         </div>

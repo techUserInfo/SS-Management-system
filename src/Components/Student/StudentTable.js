@@ -7,7 +7,7 @@ const StudentTable = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .post("http://localhost:3000/users")
+      .post("http://localhost:5000/users")
       .then((result) => setData(result.data))
       .catch((error) => console.log(error));
   }, []);
