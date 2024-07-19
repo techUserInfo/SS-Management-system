@@ -1,19 +1,25 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../../assets/css/menu.css'
+import { FaUser, FaUserEdit, FaTable, FaEnvelope } from 'react-icons/fa';
+import '../../../assets/css/menu.css';
 
-
-export default function menu() {
+export default function Menu() {
   return (
     <div>
-
-        <div class="sidebar">
-        <Link to="/UserRole"> Role </Link>
-        <Link to="/StudentRole"> RegistrationFrom </Link>
-        <Link to="/StudentTable"> AllStudent </Link>
-        <Link to="/contact">Contact</Link>
-        </div>
+      <div className="sidebar">
+        <Link to="/UserRole">
+          <FaUser /> Role
+        </Link>
+        <Link to="/StudentRole">
+          <FaUserEdit /> Registration Form
+        </Link>
+        <Link to="/StudentTable">
+          <FaTable /> All Students
+        </Link>
+       <Link to="#contact">
+          <FaEnvelope /> Contact
+        </Link>
+      </div>
     </div>
-  )
+  );
 }
-

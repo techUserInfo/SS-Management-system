@@ -13,10 +13,10 @@
     width: 30%;
     margin: auto;
     padding: 20px;
-    color: #0bd3b1;
-    justify-content: center;
+    color: #010a09;
+    justify-content:center;
     padding-bottom: 50px;
-    text-align: center;
+    text-align: flex;
 }
 
 .roleForm {

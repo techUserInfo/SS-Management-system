@@ -1,8 +1,11 @@
 import React from "react";
 import "../../assets/css/StudentRole.css";
+import Dashboard from "../Comman/Dashboard";
 
 const Student_Role = () => {
   return (
+    <> 
+    <Dashboard/>   
     <div>
       <div className="container1">
         <h1 className="heading">Student Profile Form</h1>
@@ -38,6 +41,8 @@ const Student_Role = () => {
         
       </div>
     </div>
+    </>
+
   );
 };
 

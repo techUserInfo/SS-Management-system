@@ -2,6 +2,8 @@ import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import "../../assets/css/StudentTable.css";
+import Dashboard from "../Comman/Dashboard";
+
 
 const StudentTable = () => {
   const [data, setData] = useState([]);
@@ -12,6 +14,8 @@ const StudentTable = () => {
       .catch((error) => console.log(error));
   }, []);
   return (
+    <>
+    <Dashboard/>
     <div className="StudentTable">
       <h2>Student Table</h2>
       <table className="table">
@@ -43,6 +47,7 @@ const StudentTable = () => {
         </tbody>
       </table>
     </div>
+    </>
   );
 };
 
