@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
 import axios from 'axios';
+import '../../assets/Dashboard.css'
 
 const Dashboard = () => {
    const [studentCount, setStudentCount]=useState(0);
@@ -41,10 +42,27 @@ const Dashboard = () => {
 
   return (
     <div>
-       <h2>Dashboard</h2>
-       <p>Number of students registered in the last 90 days: {studentCount}</p>
-       <p>Number of teachers registered in last 90 days:{teacherCount}</p>
-       <p>Number of admins registered in last 90 days:{adminCount}</p> 
+     <div className="box-container">
+        <input className="Std_btn" 
+        type="button" 
+        value={`Number of Students registered in the last 90 days: ${studentCount}`}  
+        readonly
+        />
+        <input className="Std_btn"
+         type="button" 
+         value={`Number of Teachers registered in last 90 days: ${teacherCount}`} 
+         readonly
+         />
+        <input className="Std_btn" 
+        type="button" 
+        value={`Number of Admins registered in last 90 days: ${adminCount}`} 
+        readonly
+        />
+        <input className="Std_btn" 
+        type="button" 
+        value="A"
+        />   
+    </div>
     </div>
   )
 };

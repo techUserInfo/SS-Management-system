@@ -5,7 +5,7 @@ import Login from '../Components/Login';
 import Register from '../Components/Register';
 import StudentRole from '../Components/StudentRole';
 import StudentTable from '../Components/StudentTable';
-import Dashboard from '../Components/Student/Dashboard';
+import Dashboard from '../Components/Common/Dashboard';
 
 const RoutesConfig = () => {
   return (
@@ -15,10 +15,10 @@ const RoutesConfig = () => {
           <Route path="/login" element={< Login />}/>
           <Route path="/register" element={< Register />}/>
           <Route path="/userRole" element={< UserRole />}/>
-          <Route exact path="/" element={< Login />}/>
           <Route path ="/studentRole" element={<StudentRole/>}/>
           <Route path ="/studentTable" element={<StudentTable/>}/>
           <Route path='/dashboard' element={<Dashboard/>}/>
+          <Route exact path="/" element={< Login />}/>
         </Routes>
       </BrowserRouter>
     </div>
