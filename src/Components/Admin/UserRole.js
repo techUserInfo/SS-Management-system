@@ -1,10 +1,10 @@
 import React from 'react';
-import "../assets/UserRole.css"
+import '../../assets/UserRole.css';
 
-  const Role = () =>  {
+  const UserRole = () =>  {
 	return (
     <div className="userid">
-      <h2>User Role</h2>
+      <h3>User Role</h3>
       <div className="roleForm">
         <form action="/submit" method="post">
           <label htmlFor="username">User Name</label>
@@ -23,4 +23,4 @@ import "../assets/UserRole.css"
     );
 }
  
-export default Role;
+export default UserRole;

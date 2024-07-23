@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import '../assets/StudentTable.css'
+import '../../assets/StudentTable.css';
 
 const StudentTable = () => {
     const [data,setData]=useState([])
@@ -42,7 +42,7 @@ const StudentTable = () => {
       </tbody>
     </table>
     </div>
-  )
+  );
 }
 
-export default StudentTable
+export default StudentTable;

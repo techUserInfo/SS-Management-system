@@ -3,38 +3,38 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    text-align: center;
 }
 
 .container1 {
-    width: 60%;
-    margin: auto;
+    width: 100%;
+    margin: 50px auto;
+    max-width: 800px;
     overflow: hidden;
     display: grid;
     padding: 20px;
     background: white;
     border-radius: 29px;
-    margin-top: 50px;
-    margin-bottom: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .heading {
-    font-size: 3em;
+    font-size: 2.5em;
     text-align: center;
     color: #136e95;
+    margin-bottom: 20px;
 }
 
 .container2 {
-    display: flexbox;
+    display: flex;
     flex-wrap: wrap;
-    padding-left: 20%;
-    margin-bottom: 20px;
-    width: 60%;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
 } 
 
 label {
-    /* font-size: 20px; */
     color: #136e95;
     margin: 10px 0 5px;
     font-weight: bold;
@@ -43,26 +43,40 @@ label {
 
 input {
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 12px;
+    box-sizing: border-box;
+    max-width: 600px;
 }
 
 .Std_submitbtn {
     font-size: 17px;
+    text-align: center;
     width: 50%;
+    max-width: 200px;
     padding: 10px;
     background-color: #5cb85c;
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    margin-left: 27%;
-    margin-top: 27px;
+    margin-top: 20px;
 }
 
 .Std_submitbtn:hover {
     background-color: #166c7d;
-    transition-delay: 0.6ms;
+    transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .container1 {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .Std_submitbtn {
+        width: 100%;
+    }
 }

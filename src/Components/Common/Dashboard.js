@@ -1,6 +1,9 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
 import axios from 'axios';
+import AppHeader from './Header/AppHeader';
+import Menu from './Header/Menu';
+import Footer from './Header/Footer';
 import '../../assets/Dashboard.css'
 
 const Dashboard = () => {
@@ -42,6 +45,8 @@ const Dashboard = () => {
 
   return (
     <div>
+    <AppHeader />
+    <Menu/>
      <div className="box-container">
         <input className="Std_btn" 
         type="button" 
@@ -63,6 +68,7 @@ const Dashboard = () => {
         value="A"
         />   
     </div>
+    <Footer />
     </div>
   )
 };

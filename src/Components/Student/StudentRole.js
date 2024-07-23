@@ -1,5 +1,5 @@
 import React from 'react'
-import '../assets/StudentRole.css'
+import '../../assets/StudentRole.css';
 
 const Student_Role = () => {
   return (
@@ -24,7 +24,7 @@ const Student_Role = () => {
               <label>Email</label>
               <input type="email" id="email" required/>
 
-              <label>className</label>
+              <label>ClassName</label>
               <input type="text" id="className" required/>
 
               <label>Section</label>

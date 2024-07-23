@@ -1,10 +1,10 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route, } from "react-router-dom";
-import UserRole from '../Components/UserRole'
-import Login from '../Components/Login';
-import Register from '../Components/Register';
-import StudentRole from '../Components/StudentRole';
-import StudentTable from '../Components/StudentTable';
+import Login from '../Components/Login/Login';
+import Register from '../Components/Login/Register';
+import UserRole from '../Components/Admin/UserRole';
+import StudentRole from '../Components/Student/StudentRole';
+import StudentTable from '../Components/Student/StudentTable';
 import Dashboard from '../Components/Common/Dashboard';
 
 const RoutesConfig = () => {
@@ -22,7 +22,7 @@ const RoutesConfig = () => {
         </Routes>
       </BrowserRouter>
     </div>
-  )
+  );
 }
 
 export default RoutesConfig;

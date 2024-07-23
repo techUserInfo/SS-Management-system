@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
-import "../assets/Login.css";
+import '../../assets/Login.css';
 
 const Login = () => {
   const [username, setusername] = useState("");
@@ -63,28 +63,7 @@ const Login = () => {
       setError("An unexpected error occurred. Please try again.");
     }
   };
-
-  //   console.log(data);
-  //   try {
-  //     await axios.post('http://localhost:5000/login', data).then((res) => {
-  //       console.log(res.data.message);
-  //       if (res.statusText !== "OK") {
-  //         throw new Error("Invalid username or password");
-  //       } else {
-  //         //insert session storage
-  //         const {UserName,FirstName,LastName}=res.data.user;
-  //         sessionStorage.setItem("user", JSON.stringify({UserName, FirstName, LastName}));
-
-  //         navigate("/userRole");
-  //       }
-  //     });
-  //   } catch (error) {
-  //     console.error("Unexpected error:", error);
-  //     setError("An unexpected error occurred. Please try again.");
-  //   }
-  // };
   
-
   return (
     <div className="login">
       <form>
