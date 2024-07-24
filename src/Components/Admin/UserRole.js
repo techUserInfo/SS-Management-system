@@ -13,22 +13,19 @@ const Role = () => {
   
   const handleChange = async(e) => {
     const { name, value } = e.target;
-    setFormData({...formData,[name]: value});
+    setFormData({...formData,[name]: value}); 
 
-    if (name === 'UserName') {
-        axios.post('http://localhost:5000/check-username?username=${value}')
-        .then(response => {
+      try {
+        const response = await axios.post('http://localhost:5000/check-username', { UserName: value });
         if (response.status === 200) {
           setDoesExist(response.data.exists);
         } else {
           setDoesExist(false);
         }
-      })
-      .catch (error => {
+      } catch (error) {
         console.error('Error:', error);
         setDoesExist(false);
-      })
-    };
+    }
   };
   
 // create role
@@ -46,6 +43,7 @@ const Role = () => {
       console.error('Error:', error);
     }
   };
+
 //update role
 const handleUpdate = async (e) => {
   e.preventDefault();
@@ -84,7 +82,7 @@ const handleUpdate = async (e) => {
             </option>
             <option value="student">Student</option>
             <option value="teacher">Teacher</option>
-            <option value="admin">Stuff</option>
+            <option value="admin">Staff</option>
             <option value="admin">Admin</option>
           </select>
           <div className="btncontainer">
