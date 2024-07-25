@@ -1,23 +1,26 @@
-
 body{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background:  white;
+    background-color:  white;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 .login{
-    width: 400px;
+    width: 350px;
     background: #b9edec;
     color: #333;
     border-radius: 8px;
-    padding: 30px 30px;
+    padding: 10px 20px;
     border: 3px solid rgba(50, 45, 45, 0.3);
+    margin-right: 200px;
 }
 .login h2{
-    font-size: 37px;
+    font-size: 2.5rem;
     text-align: center;
-    font-weight: 550;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 .login .input-box{
     position: relative;
@@ -30,18 +33,19 @@ body{
     font-weight: 400;
     text-align: left;
     font-size: 1.2rem;
+    display: block;
+    margin-bottom: 5px;
 }
 .input-box input{
     height: 90%;
     width: 100%;
     background: transparent;
-    border: none;
     outline: none;
     border: 2px solid rgba(50, 45, 45, 0.3);
-    border-radius: 10px;
+    border-radius: 1rem;
     color: #333;
     font-size: 15px;
-    padding: 20px 10px 20px 20px;
+    padding: 10px;
 }
 .input-box input::placeholder{
     color: #333;
@@ -55,8 +59,8 @@ body{
 .login .rem-for{
     display: flex;
     justify-content: space-between;
-    font-size: 14px;
-    margin: 5px;
+    font-size: 1rem;
+    margin: 10px 0;
 }
 .rem-for label {
     color: #333;
@@ -67,7 +71,7 @@ body{
     
 }
 .rem-for label input{
-    margin-right: 3px;
+    margin-right: 5px;
     font-size: small;
     width: 10%;
 }
@@ -75,26 +79,27 @@ body{
     color: #333;
     text-decoration: none;
     margin-top: 3%;
+    transition: color 0.3s;
 }
 .rem-for a:hover{
     text-decoration: underline;
 }
 .login .btn{
    height: 38px;
-   width: 35%; 
+   width: 35%;
+   padding: 10px; 
    margin:15px 33%;
    color: #333;
    border: none;
    border-radius: 10px;
-   font-size: 16px; 
+   font-size: 1rem; 
    font-weight: 700;
 }
 .login .register-link{
-    font-size: 14px;
+    font-size: 1rem;
     text-align: center;
     margin: 8px;
     color: #333;
-    justify-content: space-between;
 }
 .register-link .r{
     color: #333;

@@ -1,68 +1,66 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
 body{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background:  white;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 .register{
-    height: 620px;
-    width: 400px;
+    width: 350px;
     background: #b9edec;
     color: #333;
     border-radius: 8px;
-    padding: 30px 30px;
+    padding: 20px;
     border: 3px solid rgba(50, 45, 45, 0.3);
+    margin-right: 200px;
 }
 .register h2{
     font-size: 35px;
     text-align: center;
+    margin-bottom: 20px;
 }
 .register .label-box{
     position: relative;
     width: 100%;
-    height: 50px;
-    margin: 23px 0 0 2px; 
+    height: 55px;
+    margin: 25px 0 0 2px; 
 }
 .register .label-box label{
     color: #333;
     font-weight: 400;
     text-align: left;
-    height:35%;
     font-size: 1.2rem;
+    display: block;
+    margin-bottom: 5px;
+    height:15px;
 }
 .label-box input{
     height: 80%;
     width: 100%;
     background: transparent;
-    border: none;
-    outline: none;
     border: 2px solid rgba(50, 45, 45, 0.3);
     border-radius: 10px;
     color: #333;
     font-size: 15px;
-    padding: 20px 10px 20px 20px;
+    box-sizing: border-box;
+    padding: 20px;
 }
 .label-box input::placeholder{
     color: #333;
 }
 .label-box .icon{
     position: absolute;
-    left: 90%;
-    top: 32px;
     font-size: 17px;
-    align-items: center;
+    right: 15px;
+    top: 35px;
 }
 .register .term{
     display: flex;
+    align-items: center;
     font-size: 15px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .term label {
     color: #333;
@@ -71,15 +69,16 @@ body{
     display:flex;
     text-align: left;
     font-size: 1rem;
+    align-items: center;
 }
 .term label input{
-    margin-right: 4px;
-    width: 20%;
+    margin-right: 8px;
+    width: 8%;
 }
 .register .btn{
    height: 38px;
    width: 40%; 
-   margin:20px 32%;
+   margin-top:20px;
    color: #333;
    border: none;
    border-radius: 10px;
@@ -89,7 +88,7 @@ body{
 .register .login-link{
     font-size: 14px;
     text-align: center;
-    margin: 5px;
+    margin-top: 20px;
     color: #333;
 }
 .login-link .r{

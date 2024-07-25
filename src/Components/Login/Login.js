@@ -54,7 +54,7 @@ const Login = () => {
       if (res.status === 200) {
         const { UserName, FirstName, LastName } = res.data.user;
         sessionStorage.setItem("user", JSON.stringify({ UserName, FirstName, LastName }));
-        navigate("/userRole");
+        navigate("/dashboard");
       } else {
         throw new Error("Invalid username or password");
       }

@@ -1,17 +1,15 @@
 import React, { useState } from 'react'
 import { useNavigate, Link } from "react-router-dom";
-import { FaUser, FaLock ,} from "react-icons/fa";
+import { FaPhone, FaLock } from "react-icons/fa";
 import '../../assets/Register.css';
 
-
-
 const Register = () => {
-const [name, setName] = useState('');
-  const [username, setUsername] = useState('');
-  const [emailId, setEmailId] = useState('');
-  const [phoneNo, setPhoneNo] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
+  const [emailId, setEmailId] = useState("");
+  const [phoneNo, setPhoneNo] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const navigate=useNavigate();
 
   const controlSubmit = async (e) => {
@@ -52,7 +50,7 @@ const [name, setName] = useState('');
             <input name="name" value={name} 
             onChange={(e)=> setName(e.target.value)}
              type='text' id='name' required/>
-            <FaUser className='icon'/>
+            
         </div>
         <div className="label-box">
             <label for='username'>Username</label>
@@ -61,7 +59,6 @@ const [name, setName] = useState('');
             value={username}
             onChange={(e)=> setUsername(e.target.value)}
             type='text' id='username' required/>
-            <FaUser className='icon'/>
         </div>
         <div className="label-box">
             <label for='email'>Email Id</label>
@@ -70,17 +67,19 @@ const [name, setName] = useState('');
             value={emailId}
             onChange={(e)=> setEmailId(e.target.value)}
             type='email' id='email' required/>
-            <FaLock className='icon'/>
+            
         </div>
+
         <div className="label-box">
-            <label1 for='phn'>Phone no</label1>
+            <label for='phn'>Phone no</label>
             <input 
             name="phoneNo"
             value={phoneNo}
             onChange={(e)=> setPhoneNo(e.target.value)}
             type='number' id='phn' required/>
-            <FaLock className='icon'/>
+            <FaPhone className="icon" />
         </div>
+
         <div className="label-box">
             <label for='password'>Password</label>
             <input 
@@ -92,7 +91,6 @@ const [name, setName] = useState('');
         </div>
         <div className="term">
             <label><input type='checkbox' required/>I agree to the terms & conditions</label>
-            
         </div>
 
         <button to ={"/login"}

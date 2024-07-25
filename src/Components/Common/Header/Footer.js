@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div>
       <nav className='footer_bg'>
-        <div className='container'>
+        <div className='Container'>
         <footer>
       <Link className='footer-logo' to='/new-footer-text'>
         New Footer Text

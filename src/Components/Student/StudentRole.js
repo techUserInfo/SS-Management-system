@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../assets/StudentRole.css';
 
-const Student_Role = () => {
+const StudentRole = () => {
   return (
     <div>
       <div className="container1">
@@ -38,7 +38,7 @@ const Student_Role = () => {
         </div>
     </div>
     </div>
-  )
+  );
 }
 
-export default Student_Role
+export default StudentRole;

@@ -4,7 +4,7 @@ import axios from 'axios';
 import AppHeader from './Header/AppHeader';
 import Menu from './Header/Menu';
 import Footer from './Header/Footer';
-import '../../assets/Dashboard.css'
+import '../../assets/Dashboard.css';
 
 const Dashboard = () => {
    const [studentCount, setStudentCount]=useState(0);
@@ -70,8 +70,8 @@ const Dashboard = () => {
     </div>
     <Footer />
     </div>
-  )
-};
+  );
+}
 
 export default Dashboard;
 
