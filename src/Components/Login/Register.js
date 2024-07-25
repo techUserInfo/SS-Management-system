@@ -29,7 +29,6 @@ const [name, setName] = useState("");
           },
           body: JSON.stringify(data)
         });
-  
         const result = await response.json();
         console.log("Registration successful:", result);
         navigate('/login');
@@ -43,7 +42,7 @@ const [name, setName] = useState("");
 
     <div className='register'>
     {error && <p style={{ color: 'red' }}>{error}</p>}
-    <form onSubmit={controlSubmit}>
+    <form>
         <h2>Registration</h2>
         <div className="label-box">
             <label for='name'>Name</label>
@@ -93,7 +92,7 @@ const [name, setName] = useState("");
             <label><input type='checkbox' required/>I agree to the terms & conditions</label>
         </div>
 
-        <button to ={"/login"}
+        <button onSubmit={controlSubmit}
         type='submit' className='btn btn-success'>Register</button>
 
         <div className="login-link">

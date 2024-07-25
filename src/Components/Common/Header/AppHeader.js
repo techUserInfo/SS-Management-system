@@ -15,7 +15,7 @@ const AppHeader = () => {
     <div>
        <nav className="header_bg">
     <div className="container">
-        <h3>Student Admin Dashboard</h3>
+        <h4>Student Admin Dashboard</h4>
       <select className='drop'>
       <option value="profile">My Profile</option>
       <option value="logout">LogOut</option>

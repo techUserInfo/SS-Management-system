@@ -8,7 +8,7 @@ body{
     font-family: Arial, sans-serif;
 }
 .register{
-    width: 350px;
+    width: 375px;
     background: #b9edec;
     color: #333;
     border-radius: 8px;
@@ -40,8 +40,9 @@ body{
     height: 80%;
     width: 100%;
     background: transparent;
+    outline: none;
     border: 2px solid rgba(50, 45, 45, 0.3);
-    border-radius: 10px;
+    border-radius: 1rem;
     color: #333;
     font-size: 15px;
     box-sizing: border-box;
@@ -54,7 +55,7 @@ body{
     position: absolute;
     font-size: 17px;
     right: 15px;
-    top: 35px;
+    top: 37px;
 }
 .register .term{
     display: flex;
@@ -72,8 +73,9 @@ body{
     align-items: center;
 }
 .term label input{
-    margin-right: 8px;
+    margin-right: 3px;
     width: 8%;
+    margin-bottom: 5px;
 }
 .register .btn{
    height: 38px;
