@@ -19,6 +19,9 @@ export default function Menu() {
        <Link to="#contact">
           <FaEnvelope /> Contact
         </Link>
+        <Link to="/superadmin">
+          <FaTable /> SuperAdmin
+        </Link>
       </div>
     </div>
   );
