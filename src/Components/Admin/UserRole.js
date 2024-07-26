@@ -1,8 +1,14 @@
 import React from 'react';
-import '../../assets/UserRole.css';
+import '../../assets/Dashboard.css';
+import AppHeader from '../Common/Header/AppHeader';
+import Menu from '../Common/Header/Menu';
+import Footer from '../Common/Header/Footer';
 
   const UserRole = () =>  {
 	return (
+    <>
+  <AppHeader />
+  <Menu/>
     <div className="userid">
       <h3>User Role</h3>
       <div className="roleForm">
@@ -20,6 +26,8 @@ import '../../assets/UserRole.css';
         </form>
       </div>
     </div>
+    <Footer/>
+    </>
     );
 }
  

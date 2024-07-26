@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaUser, FaUserEdit, FaTable, FaEnvelope } from 'react-icons/fa';
-import '../../../assets/Menu.css'
+import '../../../assets/Dashboard.css'
 
 export default function Menu() {
   return (

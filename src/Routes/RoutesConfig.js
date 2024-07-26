@@ -6,19 +6,24 @@ import UserRole from '../Components/Admin/UserRole';
 import StudentRole from '../Components/Student/StudentRole';
 import StudentTable from '../Components/Student/StudentTable';
 import Dashboard from '../Components/Common/Dashboard';
+import PrivateRoute from '../Components/Login/PrivateRoute';
 
 const RoutesConfig = () => {
   return (
     <div>
       <BrowserRouter>
         <Routes>
+          <Route exact path="/" element={< Login />}/>
           <Route path="/login" element={< Login />}/>
           <Route path="/register" element={< Register />}/>
-          <Route path="/userRole" element={< UserRole />}/>
-          <Route path ="/studentRole" element={<StudentRole/>}/>
-          <Route path ="/studentTable" element={<StudentTable/>}/>
-          <Route path='/dashboard' element={<Dashboard/>}/>
-          <Route exact path="/" element={< Login />}/>
+          <Route path="/userRole"
+          element={ <PrivateRoute><UserRole /></PrivateRoute>}/>
+          <Route path ="/studentRole"
+          element={ <PrivateRoute><StudentRole /></PrivateRoute>}/>
+          <Route path ="/studentTable"
+          element={ <PrivateRoute><StudentTable /></PrivateRoute>}/>
+          <Route path="/dashboard"
+          element={ <PrivateRoute><Dashboard /></PrivateRoute>}/>
         </Routes>
       </BrowserRouter>
     </div>

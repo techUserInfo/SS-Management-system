@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate, Link } from "react-router-dom";
-import { FaPhone, FaLock } from "react-icons/fa";
-import '../../assets/Register.css';
+import '../../assets/Dashboard.css';
 
 const Register = () => {
 const [name, setName] = useState("");
@@ -76,7 +75,6 @@ const [name, setName] = useState("");
             value={phoneNo}
             onChange={(e)=> setPhoneNo(e.target.value)}
             type='number' id='phn' required/>
-            <FaPhone className="icon" />
         </div>
 
         <div className="label-box">
@@ -86,7 +84,6 @@ const [name, setName] = useState("");
             value={password}
             onChange={(e)=> setPassword(e.target.value)}
             type='password' id='password' required/>
-            <FaLock className='icon'/>
         </div>
         <div className="term">
             <label><input type='checkbox' required/>I agree to the terms & conditions</label>

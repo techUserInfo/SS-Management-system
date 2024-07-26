@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
-import '../../assets/Login.css';
+import '../../assets/Dashboard.css';
 
 const Login = () => {
   const [username, setusername] = useState("");
@@ -10,33 +10,8 @@ const Login = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const user = sessionStorage.getItem("user");
-    if (!user) {
-      navigate("/login");
-    }
-  }, [navigate]);
-
-  useEffect(() => {
-    if (!username || !password) {
       sessionStorage.removeItem("user");
-    }
-  }, [username, password]);
-
-  useEffect(()=>{
-    if (username){
-      sessionStorage.setItem("username",username);
-    } else{
-      sessionStorage.removeItem("username");
-    }
-  },[username]);
-
-  useEffect(()=>{
-    if (password){
-      sessionStorage.setItem("password",password);
-    } else {
-      sessionStorage.removeItem("password")
-    }
-  },[password]);
+  }, []);
 
   const controlSubmit = async (e) => {
     e.preventDefault();
@@ -52,8 +27,8 @@ const Login = () => {
     try {
       const res = await axios.post('http://localhost:5000/login', data);
       if (res.status === 200) {
-        const { UserName, FirstName, LastName } = res.data.user;
-        sessionStorage.setItem("user", JSON.stringify({ UserName, FirstName, LastName }));
+        const { UserName, FirstName, LastName, role } = res.data.user;
+        sessionStorage.setItem("user", JSON.stringify({ UserName, FirstName, LastName, role }));
         navigate("/dashboard");
       } else {
         throw new Error("Invalid username or password");

@@ -1,9 +1,14 @@
 import React from 'react'
-import '../../assets/StudentRole.css';
+import '../../assets/Dashboard.css';
+import AppHeader from '../Common/Header/AppHeader';
+import Menu from '../Common/Header/Menu';
+import Footer from '../Common/Header/Footer';
 
 const StudentRole = () => {
   return (
     <div>
+    <AppHeader />
+    <Menu/>
       <div className="container1">
         <h1 className="heading">Student Profile Form</h1>
         <div className="container2">
@@ -37,6 +42,7 @@ const StudentRole = () => {
             </form>
         </div>
     </div>
+    <Footer/>
     </div>
   );
 }
