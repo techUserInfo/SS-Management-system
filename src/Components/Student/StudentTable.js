@@ -2,6 +2,9 @@ import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import "../../assets/css/StudentTable.css";
+import AppHeader from "../Common/Header/AppHeader";
+import Menu from "../Common/Header/Menu";
+import Footer from "../Common/Header/Footer"
 
 const StudentTable = () => {
   const [data, setData] = useState([]);
@@ -12,6 +15,9 @@ const StudentTable = () => {
       .catch((error) => console.log(error));
   }, []);
   return (
+    <>
+     <AppHeader />
+     <Menu />
     <div className="StudentTable">
       <h2>Student Table</h2>
       <table className="table">
@@ -43,6 +49,8 @@ const StudentTable = () => {
         </tbody>
       </table>
     </div>
+    <Footer />
+    </>
   );
 };
 

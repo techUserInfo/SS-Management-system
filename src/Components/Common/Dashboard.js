@@ -14,11 +14,10 @@ function Dashboard() {
         <input className="Std_btn" type="button" value="B" />
         <input className="Std_btn" type="button" value="C" />
         <input className="Std_btn" type="button" value="D" />
-       
       </div>
       <Footer />
     </div>
-  );
+  ); 
 }
 
 export default Dashboard;

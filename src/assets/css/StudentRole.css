@@ -6,15 +6,15 @@ body {
 }
 
 .container1 {
-    width: 100%;
+    width: 120%;
     margin: auto;
     overflow: hidden;
     display: grid;
-    padding: 10px;
+    padding: 15px;
     background: white;
     border-radius: 29px;
     margin-top: 5px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -27,7 +27,7 @@ body {
 .container2 {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 10%;
+    padding-left: 15%;
     margin-bottom: 1px;
     width: 100%;
     justify-content: space-between;
@@ -45,7 +45,7 @@ input {
     width: 100%;
     padding: 5px;
     margin-top: 3px;
-    border: 1px solid #ccc;
+    border: 1px solid #158b68;
     border-radius: 10px;
 }
 
@@ -53,8 +53,8 @@ input {
     font-size: 17px;
     width: 50%;
     padding: 10px;
-    background-color: #5cb85c;
-    color: white;
+    background-color:#0e2b07; ;
+    color: rgb(13, 185, 65);
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -63,6 +63,6 @@ input {
 }
 
 .Std_submitbtn:hover {
-    background-color: #166c7d;
+    background-color: #0f721c;
     transition-delay: 0.6ms;
 }

@@ -1,3 +1,14 @@
+.Std_btn_dashboard {
+  width: 150px; 
+  height: 100px; 
+  border: 2px solid #4e4e4e; 
+  background-color: #c7f8f5; 
+  margin: 20px; 
+  display: inline-block; 
+  border-radius: 10%;
+  position: relative; 
+  top: -200px; 
+}
 .Std_btn {
   width: 150px; 
   height: 100px; 

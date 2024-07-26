@@ -1,8 +1,14 @@
 import React from "react";
 import "../../assets/css/UserRole.css";
+import AppHeader from "../Common/Header/AppHeader";
+import Menu from "../Common/Header/Menu";
+import Footer from "../Common/Header/Footer"
 
 const Role = () => {
   return (
+    <>
+  <AppHeader />
+  <Menu />
     <div className="userid">
       <h2>User Role</h2>
       <div className="roleForm">
@@ -27,6 +33,8 @@ const Role = () => {
         </form>
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 
