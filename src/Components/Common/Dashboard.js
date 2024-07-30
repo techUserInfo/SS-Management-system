@@ -51,17 +51,17 @@ const Dashboard = () => {
         <input className="Std_btn" 
         type="button" 
         value={`Number of Students registered in the last 90 days: ${studentCount}`}  
-        readonly
+        readOnly
         />
         <input className="Std_btn"
          type="button" 
          value={`Number of Teachers registered in last 90 days: ${teacherCount}`} 
-         readonly
+         readOnly
          />
         <input className="Std_btn" 
         type="button" 
         value={`Number of Admins registered in last 90 days: ${adminCount}`} 
-        readonly
+        readOnly
         />
         <input className="Std_btn" 
         type="button" 

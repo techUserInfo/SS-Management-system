@@ -54,7 +54,6 @@ const Login = () => {
             required
           />
         </div>
-        <br />
         <div className="input-box">
           <label htmlFor="password">Password</label>
           <input
@@ -66,7 +65,6 @@ const Login = () => {
             required
           />
         </div>
-        <br />
         <div className="rem-for">
           <label>
             <input type="checkbox" />

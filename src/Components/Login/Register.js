@@ -1,106 +1,193 @@
 import React, { useState } from 'react'
 import { useNavigate, Link } from "react-router-dom";
+import axios from "axios";
 import '../../assets/Dashboard.css';
 
 const Register = () => {
-const [name, setName] = useState("");
-  const [username, setUsername] = useState("");
-  const [emailId, setEmailId] = useState("");
-  const [phoneNo, setPhoneNo] = useState("");
-  const [password, setPassword] = useState("");
+  const [UserName, setUserName] = useState("");
+  const [FirstName, setFirstName] = useState("");
+  const [LastName, setLastName] = useState("");
+  const [Password, setPassword] = useState("");
+  const [Email, setEmail] = useState("");
+  const [PhoneNumber, setPhoneNumber] = useState("");
+  const [Address, setAddress] = useState("");
   const [error, setError] = useState("");
-  const navigate=useNavigate();
+  const [usernameExists, setUsernameExists] = useState(false);
+  const [emailExists, setEmailExists] = useState(false);
+  const [phoneNumberExists, setPhoneNumberExists] = useState(false);
+  const navigate = useNavigate();
+
+  const checkUsername = async () => {
+    try {
+      const response = await axios.post("http://localhost:5000/check-username", { UserName });
+      setUsernameExists(response.data.exists);
+      if (response.data.exists) {
+        setError("Username already exists");
+      } else {
+        setError("");
+      }
+    } catch (error) {
+      console.error("Error checking username:", error);
+      setError("Error checking username");
+    }
+  };
+
+  const checkEmail = async () => {
+    try {
+      const response = await axios.post("http://localhost:5000/check-email", { Email });
+      setEmailExists(response.data.exists);
+      if (response.data.exists) {
+        setError("Email already exists");
+      } else {
+        setError("");
+      }
+    } catch (error) {
+      console.error("Error checking email:", error);
+      setError("Error checking email");
+    }
+  };
+
+  const checkPhoneNumber = async () => {
+    try {
+      const response = await axios.post("http://localhost:5000/check-phone", { PhoneNumber });
+      setPhoneNumberExists(response.data.exists);
+      if (response.data.exists) {
+        setError("Phone number already exists");
+      } else {
+        setError("");
+      }
+    } catch (error) {
+      console.error("Error checking phone number:", error);
+      setError("Error checking phone number");
+    }
+  };
 
   const controlSubmit = async (e) => {
     e.preventDefault();
-    if (!name || !username || !emailId || !phoneNo || !password) {
-      setError('All fields are required');
+    if (usernameExists || emailExists || phoneNumberExists) {
+      setError("Please fix the errors before submitting");
+      return;
+    }
+    if (!UserName || !FirstName || !LastName || !Password || !Email || !PhoneNumber || !Address) {
+      setError("All fields are required");
       return;
     }
 
-    const data ={name, username, emailId, phoneNo, password};
+    const data = { UserName, FirstName, LastName, Password, Email, PhoneNumber, Address };
     try {
-        const response = await fetch("http://localhost:5000/users", {
-          method: 'POST',
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(data)
-        });
-        const result = await response.json();
-        console.log("Registration successful:", result);
-        navigate('/login');
-      } catch (error) {
-        console.error("Error during registration:", error);
-        setError('Registration failed');
-      }
-    };
+      const response = await axios.post("http://localhost:5000/signup", data);
+      console.log("Registration successful:", response.data);
+      navigate("/login");
+    } catch (error) {
+      console.error("Error during registration:", error);
+      setError("Registration failed");
+    }
+  };
 
   return (
-
-    <div className='register'>
-    {error && <p style={{ color: 'red' }}>{error}</p>}
-    <form>
+    <div className="register">
+      {error && <p style={{ color: "red" }}>{error}</p>}
+      <form onSubmit={controlSubmit}>
         <h2>Registration</h2>
         <div className="label-box">
-            <label for='name'>Name</label>
-            <input name="name" value={name} 
-            onChange={(e)=> setName(e.target.value)}
-             type='text' id='name' required/>
-            
+          <label htmlFor="FirstName">First Name</label>
+          <input
+            name="FirstName"
+            value={FirstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            type="text"
+            id="FirstName"
+            required
+          />
         </div>
         <div className="label-box">
-            <label for='username'>Username</label>
-            <input 
-            name="username"
-            value={username}
-            onChange={(e)=> setUsername(e.target.value)}
-            type='text' id='username' required/>
+          <label htmlFor="LastName">Last Name</label>
+          <input
+            name="LastName"
+            value={LastName}
+            onChange={(e) => setLastName(e.target.value)}
+            type="text"
+            id="LastName"
+            required
+          />
         </div>
         <div className="label-box">
-            <label for='email'>Email Id</label>
-            <input
-            name="emailId"
-            value={emailId}
-            onChange={(e)=> setEmailId(e.target.value)}
-            type='email' id='email' required/>
-            
+          <label htmlFor="UserName">Username</label>
+          <input
+            name="UserName"
+            value={UserName}
+            onChange={(e) => setUserName(e.target.value)}
+            onBlur={checkUsername} // Check username on blur
+            type="text"
+            id="UserName"
+            required
+          />
         </div>
-
         <div className="label-box">
-            <label for='phn'>Phone no</label>
-            <input 
-            name="phoneNo"
-            value={phoneNo}
-            onChange={(e)=> setPhoneNo(e.target.value)}
-            type='number' id='phn' required/>
+          <label htmlFor="Email">Email</label>
+          <input
+            name="Email"
+            value={Email}
+            onChange={(e) => setEmail(e.target.value)}
+            onBlur={checkEmail} // Check email on blur
+            type="email"
+            id="Email"
+            required
+          />
         </div>
-
         <div className="label-box">
-            <label for='password'>Password</label>
-            <input 
-            name="password"
-            value={password}
-            onChange={(e)=> setPassword(e.target.value)}
-            type='password' id='password' required/>
+          <label htmlFor="PhoneNumber">Phone Number</label>
+          <input
+            name="PhoneNumber"
+            value={PhoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
+            onBlur={checkPhoneNumber} // Check phone number on blur
+            type="number"
+            id="PhoneNumber"
+            required
+          />
+        </div>
+        <div className="label-box">
+          <label htmlFor="Address">Address</label>
+          <input
+            name="Address"
+            value={Address}
+            onChange={(e) => setAddress(e.target.value)}
+            type="text"
+            id="Address"
+            required
+          />
+        </div>
+        <div className="label-box">
+          <label htmlFor="Password">Password</label>
+          <input
+            name="Password"
+            value={Password}
+            onChange={(e) => setPassword(e.target.value)}
+            type="password"
+            id="Password"
+            required
+          />
         </div>
         <div className="term">
-            <label><input type='checkbox' required/>I agree to the terms & conditions</label>
+          <label>
+            <input type="checkbox" required />I agree to the terms & conditions
+          </label>
         </div>
-
-        <button onSubmit={controlSubmit}
-        type='submit' className='btn btn-success'>Register</button>
-
+        <button type="submit" className="btn btn-success" disabled={usernameExists || emailExists || phoneNumberExists}>
+          Register
+        </button>
         <div className="login-link">
-            <p>Already have an account?
-            <Link to="/" className='r'>  Login</Link></p>
-            
+          <p>
+            Already have an account?
+            <Link to="/" className="r">
+              {" "}
+              Login
+            </Link>
+          </p>
         </div>
-    </form>
-</div>
-
-
+      </form>
+    </div>
   );
 };
 
