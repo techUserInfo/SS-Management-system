@@ -5,6 +5,7 @@ import '../../assets/css/teacherRole.css'
 const TeacherRole = () =>  {
   const [formData, setFormData] = useState({
     UserName: '',
+    role: 'teacher',
     PhoneNumber: '',
     Email: ''
   });
@@ -18,7 +19,7 @@ const TeacherRole = () =>  {
     e.preventDefault();
     console.log(formData);
     try {
-      const response = await axios.post("http://localhost:5000/teachers", formData);
+      const response = await axios.post("http://localhost:5000/assignrole", formData);
       if (response.status === 200) {
         console.log('submitted successfully');
       } else {
@@ -37,6 +38,11 @@ const TeacherRole = () =>  {
 
               <label>User Name</label>
               <input type="text" name="UserName" required value={formData.UserName} onChange={handleChange}/>
+
+              <label>Role</label>
+              <select type="text" className='role' name="role" required defaultValue={formData.role} onChange={handleChange}>
+              <option className='teacher' defaultValue="teacher">Teacher</option>
+              </select>
 
               <label>Phone No.</label>
               <input type="tel" name="PhoneNumber" required value={formData.phone} onChange={handleChange}/>

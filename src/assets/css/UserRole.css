@@ -56,13 +56,12 @@ label {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
-    margin: 20px;
+    margin: 25px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     font-size: 15px;
 }
-
 .submitbtn__role:hover {
     background-color: #3ba288;
     transition-delay: 0.5ms;
@@ -73,7 +72,7 @@ label {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
-    margin: 20px;
+    margin: 25px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -84,3 +83,4 @@ label {
     background-color: #3ba288;
     transition-delay: 0.5ms;
 }
+

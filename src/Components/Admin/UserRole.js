@@ -10,21 +10,35 @@ const Role = () => {
   });
 
   const [doesExist, setDoesExist] = useState(false);
+  const [userRole, setUserRole] = useState('');
+
   
   const handleChange = async(e) => {
     const { name, value } = e.target;
     setFormData({...formData,[name]: value}); 
 
+    if (name === 'UserName') {
       try {
         const response = await axios.post('http://localhost:5000/check-username', { UserName: value });
         if (response.status === 200) {
           setDoesExist(response.data.exists);
+          if (response.data.exists) {
+            const roleResponse = await axios.post('http://localhost:5000/checkrole', { UserName: value });
+            if (roleResponse.status === 200) {
+              setUserRole(roleResponse.data);
+            }
+          } else {
+            setUserRole('');
+          }
         } else {
           setDoesExist(false);
+          setUserRole('');
         }
       } catch (error) {
         console.error('Error:', error);
         setDoesExist(false);
+        setUserRole('');
+      }
     }
   };
   
@@ -82,12 +96,18 @@ const handleUpdate = async (e) => {
             </option>
             <option value="student">Student</option>
             <option value="teacher">Teacher</option>
-            <option value="admin">Staff</option>
+            <option value="staff">Staff</option>
             <option value="admin">Admin</option>
           </select>
           <div className="btncontainer">
-          {!doesExist ? (<input className="submitbtn_role" type="submit" value="Submit" onClick={handleSubmit}/>):
-          (<input className="updatebtn_role" type="button" value="Update" onClick={handleUpdate}/>)}
+          {!doesExist ? (
+              <input className="submitbtn_role" type="submit" value="Submit" onClick={handleSubmit} />
+            ) : (
+              <>
+                {userRole === formData.role && <p className="info" style={{color: 'red', fontSize: '12px', position: 'absolute'}}>User already has this role</p>}
+                <input className="updatebtn_role" type="button" value="Update" onClick={handleUpdate} disabled={userRole === formData.role} />
+              </>
+            )}
           </div>
         </form>
       </div>
