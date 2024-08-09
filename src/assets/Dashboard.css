@@ -644,26 +644,25 @@ body {
     height: 100vh;
   }
   .container1{
-  margin-top: 80%;
-  margin-bottom: 10%;
-  padding: 30px;
+  margin-top: 95%;
+  margin-bottom: 20%;
+  padding: 2em;
   box-sizing: border-box;
   width: 100%;
   max-width: 800px;
   display: grid;
   background: white;
-  border-radius: 35px;
+  border-radius: 1.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-left: 20%;
   justify-items: center;
 }
 
 .heading {
-  font-size: 2.3em;
+  font-size: 2em;
   text-align: center;
   color: #136e95;
-  margin-top: 1%;
-  margin-bottom: 3%;
+  margin-top: auto;
 }
 
 .container2 {
@@ -676,33 +675,33 @@ body {
 
 label {
   color: #136e95;
-  margin: 10px 0 5px;
+  margin: 0.5em 0 0.3em;
   font-weight: bold;
   display: block;
 }
 
 input {
   width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  box-sizing: border-box;
-  max-width: 600px;
+  padding: 0.8em;
+    margin-top: 0.3em;
+    border: 1px solid #ccc;
+    border-radius: 0.75em;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 .Std_submitbtn {
-  font-size: 17px;
-  text-align: center;
-  width: 50%;
-  max-width: 200px;
-  padding: 10px;
-  background-color: #5cb85c;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-top: 20px;
+  font-size: 1em;
+    text-align: center;
+    width: 50%;
+    max-width: 200px;
+    padding: 0.8em;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 0.75em;
+    cursor: pointer;
+    margin-top: 1.5em;
 }
 
 .Std_submitbtn:hover {
@@ -712,31 +711,31 @@ input {
 
 @media (max-width: 768px) {
   .container1 {
-      width: 90%;
-      margin: 20px auto;
+    width: 90%;
+    margin: 20px auto;
   }
 
   .Std_submitbtn {
-      width: 100%;
+      width: 80%;
   }
 }
 @media (max-width: 480px) {
   .heading {
-      font-size: 1.8em;
+      font-size: 1.5em;
   }
 
   .container1 {
-      margin: 10% auto; 
-      padding: 15px;
+    margin: 5% auto; 
+    padding: 1em;
   }
 
   input {
-      padding: 8px; 
+      padding: 0.7em; 
   }
 
   .Std_submitbtn {
-      font-size: 15px; 
-      padding: 8px;
+      font-size: 0.9em; 
+      padding: 0.7em;
   }
 }
 /*End Student role  */
@@ -928,4 +927,86 @@ input {
   }
   /* End user role */
 
+/* Teacher Start*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  padding-left: 100px;
+}
 
+.container4 {
+  width: 90%;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 29px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  font-size: 2.0em;
+  text-align: center;
+  color: #00070aff;
+  margin-bottom: 20px;
+}
+
+.container5 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  justify-content: space-between;
+} 
+
+label {
+  color: #136e95;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  display: block;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.Std_submitbtn {
+  font-size: 1rem;
+  width: 50%;
+  max-width: 200px;
+  padding: 10px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 20px auto 0;
+  display: block;
+}
+
+.Std_submitbtn:hover {
+  background-color: #166c7d;
+  transition-delay: 0.3s;
+}
+
+@media (max-width: 600px) {
+  .container4 {
+    padding: 20px;
+  }
+
+  .heading {
+    font-size: 1.5em;
+  }
+
+  .Std_submitbtn {
+    font-size: 0.9em;
+  }
+}
