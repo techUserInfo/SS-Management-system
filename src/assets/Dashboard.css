@@ -15,7 +15,7 @@
   background: #b9edec;
   color: #333;
   border-radius: 8px;
-  padding: 20px;
+  padding: 30px;
   border: 3px solid rgba(50, 45, 45, 0.3);
   box-sizing: border-box;
 }
@@ -48,11 +48,35 @@
     font-size: 1rem;
     box-sizing: border-box;
     padding: 12px;
-    margin-bottom: 5px;
 }
 .input-box input::placeholder{
     color: #333;
 }
+
+.password-container1 {
+  position: relative;
+  width: 100%;
+}
+
+.password-container1 input {
+  padding-right: 40px; 
+}
+
+.password-container1 svg {
+  position: absolute;
+  right: 15px;
+  top: 55%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #333;
+  width: 20px;
+  height: 20px;
+}
+
+.password-container1 svg:hover {
+  color: #555;
+}
+
 
 .login .rem-for{
     display: flex;
@@ -156,14 +180,14 @@
   background: burlywood;
   color: brown;
   border-radius: 8px;
-  padding: 40px;
+  padding: 30px;
   border: 3px solid rgba(50, 45, 45, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .register h2{
     font-size: 2rem;
     text-align: center;
-    margin-top: 5px;
-    margin-bottom: 20px;
+    margin: 0 0 20px;
 }
 .register .label-box{
     position: relative;
@@ -175,25 +199,25 @@
     color: #333;
     font-weight: 400;
     text-align: left;
-    font-size: 1.1rem;
+    font-size: 1rem;
     display: block;
-    margin-bottom: 0.5px;
+    margin-bottom: 4px;
 }
 .label-box input{
   height: 40px;
   width: 100%;
-  padding: 5px; 
+  padding: 10px; 
   background: transparent;
   outline: none;
   border: 2px solid rgba(50, 45, 45, 0.3);
   border-radius: 15px;
   color: #333;
-  font-size: 1rem;
+  font-size: 0.9rem;
   box-sizing: border-box;
   transition: border-color 0.3s ease;
 }
 .label-box input::placeholder{
-    color: #333;
+    color: #666;
 }
 
 .register .term{
@@ -216,6 +240,56 @@
     width: 8%;
     margin-bottom: 5px;
 }
+.phone-container {
+  display: flex;
+  align-items: center;
+  flex-direction:row;
+}
+
+.country-code-select {
+  width: 23%;
+  height: 40px;
+  border: 2px solid rgba(50, 45, 45, 0.3);
+  border-radius: 15px 0 0 15px;
+  padding: 0 1px;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+  background-color:burlywood;
+}
+
+.phone-container input {
+  width: 100%;
+  height: 40px;
+  border: 2px solid rgba(50, 45, 45, 0.3);
+  border-radius: 0 15px 15px 0;
+  padding: 0 10px;
+  font-size: 0.9rem;
+  color: #333;
+  flex: 1;
+  margin-bottom: 2.3%;
+}
+
+.password-container2 {
+  position: relative;
+}
+
+.password-container input {
+  width: calc(100% - 30px);
+  padding-right: 30px;
+}
+
+.password-container2 svg {
+  position: absolute;
+  top: 55%;
+  right: 10px; 
+  transform: translateY(-50%);
+  cursor: pointer;
+  fill: #333;
+  width: 20px; 
+  height: 20px; 
+}
+
 .register .btn{
    width: 50%; 
    padding: 10px;
@@ -261,6 +335,7 @@
 
   .label-box input {
       height: 35px;
+      font-size: 0.9rem;
   }
 
   .register .btn {
